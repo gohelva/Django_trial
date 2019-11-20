@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content%}
+<h1>about world</h1>
+<p>template</p>
+<p>
+	{{ my_text }},{{ my_number }}
+</p>
+<ul>
+	{% for my_sub_item in my_list %}
+		{% if my_sub_item == 124 %}
+		<li>{{ forloop.counter }} - {{ my_sub_item }}</li>
+		{% endif %}
+		<li>{{ my_sub_item }}</li>  
+	{% endfor %}
+</ul>
+{% endblock content%}
